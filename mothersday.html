@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>母亲节快乐 💕</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -289,17 +290,6 @@
     0%, 100% { transform: scale(1); }
     50%       { transform: scale(1.3); }
   }
-  @keyframes petalDrift {
-    0%   { transform: translateY(-60px) rotate(0deg);   opacity: 0; }
-    5%   { opacity: 1; }
-    95%  { opacity: 0.8; }
-    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
-  }
-  @keyframes petalSway {
-    0%, 100% { margin-left: 0; }
-    25%       { margin-left: 40px; }
-    75%       { margin-left: -40px; }
-  }
 
   @media (max-width: 600px) {
     .hero-card { padding: 44px 24px 40px; }
@@ -331,8 +321,8 @@
     <h1 class="mama-name">亲爱的妈妈</h1>
 
     <h2 class="greeting-main">母亲节快乐</h2>
-    <div class="peony-wrap">
 
+    <div class="peony-wrap">
       <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="45" cy="52" rx="20" ry="14" fill="#f5a8bf" opacity=".7"/>
         <ellipse cx="32" cy="44" rx="15" ry="12" fill="#e8789b" opacity=".8"/>
@@ -341,7 +331,7 @@
         <ellipse cx="36" cy="30" rx="12" ry="10" fill="#e07090" opacity=".9"/>
         <ellipse cx="54" cy="30" rx="12" ry="10" fill="#e07090" opacity=".9"/>
         <ellipse cx="45" cy="25" rx="11" ry="9"  fill="#d45878" opacity=".95"/>
-        <ellipse cx="45" cy="22" rx="8" ry="7" fill="#c9973a" opacity=".8"/>
+        <ellipse cx="45" cy="22" rx="8"  ry="7"  fill="#c9973a" opacity=".8"/>
         <circle cx="45" cy="22" r="5" fill="#f0d080" opacity=".9"/>
         <circle cx="43" cy="20" r="2" fill="#fff" opacity=".6"/>
         <path d="M45 65 Q42 75 38 82" stroke="#7a9a60" stroke-width="2.5" fill="none" stroke-linecap="round"/>
@@ -384,7 +374,7 @@
       </svg>
     </div>
 
- <div class="tribute-section">
+    <div class="tribute-section">
       <p class="tribute-title">— 致妈妈 —</p>
       <p class="tribute-text">
         妈妈，谢谢您这些年用您的双手托起了我们，<br>
@@ -405,8 +395,6 @@
     <p class="quote-attr">— 孟郊 《游子吟》</p>
   </div>
 
-
-  <!-- Closing -->
   <div class="closing">
     <div class="closing-divider">
       <hr><span>🌹</span><hr>
@@ -418,8 +406,8 @@
     </div>
   </div>
 
- <div class="bottom-ornament">
-
+  <div class="bottom-ornament">
+    <div class="seal">福</div>
     <p>Mother's Day　二〇二六</p>
   </div>
 
@@ -446,10 +434,10 @@
     constructor() { this.reset(true); }
 
     reset(initial) {
-      this.type  = TYPES[Math.floor(Math.random() * TYPES.length)];
-      this.x     = randomRange(0, W);
-      this.y     = initial ? randomRange(-200, H) : randomRange(-80, -20);
-      this.size  = randomRange(8, 22);
+      this.type   = TYPES[Math.floor(Math.random() * TYPES.length)];
+      this.x      = randomRange(0, W);
+      this.y      = initial ? randomRange(-200, H) : randomRange(-80, -20);
+      this.size   = randomRange(8, 22);
       this.speedY = randomRange(0.6, 1.8);
       this.speedX = randomRange(-0.6, 0.6);
       this.rot    = randomRange(0, Math.PI * 2);
